@@ -1,17 +1,38 @@
 {
-  "name": "static-files-and-index-rewrite",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "connect-history-api-fallback",
+  "version": "1.5.0",
+  "description": "Provides a fallback for non-existing directories so that the HTML 5 history API can be used.",
+  "keyswords": [
+    "connect",
+    "html5",
+    "history api",
+    "fallback",
+    "spa"
+  ],
+  "engines": {
+    "node": ">=0.8"
+  },
+  "main": "lib/index.js",
+  "files": ["lib"],
   "scripts": {
-    "start": "opn http://localhost:5555/users/5.json && node ."
+    "test": "eslint lib/index.js test/index_test.js && nodeunit test/index_test.js"
   },
-  "author": "Ben Ripkens <bripkens@gmail.com> (http://bripkens.de/)",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/bripkens/connect-history-api-fallback.git"
+  },
+  "author": {
+    "name": "Ben Ripkens",
+    "email": "bripkens.dev@gmail.com",
+    "url": "http://bripkens.de"
+  },
+  "contributors": [
+    "Craig Myles <cr@igmyles.com> (http://www.craigmyles.com)"
+  ],
   "license": "MIT",
-  "dependencies": {
-    "express": "4.14.0"
-  },
   "devDependencies": {
-    "opn-cli": "3.1.0"
+    "eslint": "^0.18.0",
+    "nodeunit": "^0.9.1",
+    "sinon": "^1.14.1"
   }
 }
